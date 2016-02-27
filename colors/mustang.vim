@@ -26,7 +26,8 @@ endif
 hi Cursor       guifg=#0000ff guibg=#FFdd00 gui=none ctermbg=241
 hi Normal       guifg=#efefef guibg=#000005 gui=none ctermfg=253 ctermbg=234
 hi Normal       guifg=#f0f0cc guibg=#000005 gui=none ctermfg=253 ctermbg=234
-hi Normal       guifg=#eeeeff guibg=#000011 gui=none ctermfg=253 ctermbg=234
+hi Normal       guifg=#eeeeff guibg=#050510 gui=none ctermfg=253 ctermbg=234
+hi Normal       guifg=#eeeeff guibg=#101017 gui=none ctermfg=253 ctermbg=234
 hi NonText      guifg=#c0c0c0 guibg=#202030 gui=none ctermfg=244 ctermbg=235
 hi LineNr       guifg=#c0c0c0 guibg=#202030 gui=none ctermfg=244 ctermbg=232
 hi StatusLine   guifg=#d3d3d5 guibg=#333370 gui=italic,bold ctermfg=253 ctermbg=238 cterm=italic
@@ -36,6 +37,16 @@ hi Folded       guifg=#dddddd guibg=#101015 gui=none ctermbg=4 ctermfg=248
 hi Title        guifg=#f6f3e8 guibg=NONE    gui=bold ctermfg=254 cterm=bold
 hi Visual       guifg=#faf4c6 guibg=#3c414c gui=none ctermfg=254 ctermbg=4
 hi SpecialKey   guifg=#c0c0c0 guibg=#202020 gui=none ctermfg=244 ctermbg=236
+
+hi EvenLbg guibg=#111122 
+
+" for loops and a few of the autocmd events don't exist in previous versions
+if v:version < 700
+finish
+endif
+
+sign define EvenL linehl=EvenLbg
+
 
 " Syntax highlighting
 hi Comment    guifg=#efefef gui=none   ctermfg=244
@@ -65,4 +76,5 @@ hi def link NERDTreeOpenable String
 hi def link NERDTreeCloseable NERDTreeOpenable
 hi def link NERDTreeCWD String
 hi def link NERDTreePart String
+
 
