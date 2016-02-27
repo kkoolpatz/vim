@@ -15,6 +15,26 @@ syntax region FAILURE start=/\v[ft]\(/ skip=/\v\\./ end=/\v\)/
 syntax region VARIABL start=/\vv\(/ skip=/\v\\./ end=/\v\)/
 syntax region VARIABL start=/\v\$\$\(/ skip=/\v\\./ end=/\v\)/
 
+" Syntax Highlights for Todo Markdown
+syntax region ITALICS  start=/\v\*\*/ end=/\v\*\*/
+syntax region BOLDTEXT start=/\v \*/ end=/\v\* /
+syntax region HEADING1 start=/\v^#/ end=/\v\n/ 
+syntax region HEADING2 start=/\v^##/ end=/\v\n/
+syntax region HEADING3 start=/\v^###/ end=/\v\n/
+syntax region CODE    start=/\v^---/ end=/\v^---/
+syntax region ITALICS start=/\v^\>/ end=/\v$/
+
+hi ITALICS  guifg=#FF9966 gui=italic
+hi BOLDTEXT guifg=#FFFF00 gui=BOLD
+hi HEADING3 guifg=#FF00FF gui=BOLD
+hi HEADING2 guifg=#EEEEEE gui=BOLD
+hi HEADING1 guifg=#00FFFF gui=BOLD
+hi CODE     guifg=#993300 gui=none
+
+
+
+
+
 hi JILError guifg=#ff0000 gui=bold
 hi JILKeywords guifg=#aaaaff gui=none ctermfg=208
 hi JILComment guifg=#efefef gui=none ctermfg=040
